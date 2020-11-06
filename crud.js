@@ -39,8 +39,8 @@ function addElement(target) {
     }
     return object.appendChild(div);
   } else {
-    const div = document.querySelector(".active");
-
+    const div = document.querySelector(".active"),
+      colorAttr = div.firstElementChild.firstElementChild.getAttribute("fill");
     if (target.toLowerCase() == "circle") {
       div.innerHTML = `<svg> <circle cx="62" cy="50" r="45"/> </svg>`;
     } else if (target.toLowerCase() == "rectangle") {
@@ -52,6 +52,10 @@ function addElement(target) {
         <polygon points="10,90 120,90 65,5" />
       </svg>`;
     }
+    div.firstElementChild.firstElementChild.setAttribute(
+      "fill",
+      `${colorAttr}`
+    );
   }
 }
 

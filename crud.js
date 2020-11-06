@@ -8,7 +8,7 @@ const body = document.body,
 
 body.addEventListener("click", (e) => {
   if (e.target.parentElement == addOption && e.target.textContent != null) {
-    addElement(e.target.textContent);
+    addObject(e.target.textContent.toLowerCase());
   } else if (
     e.target.parentElement == colorOption &&
     document.querySelector(".active") != undefined &&
@@ -23,12 +23,12 @@ body.addEventListener("click", (e) => {
   }
 });
 
-function addElement(target) {
+function addObject(target) {
   if (document.querySelector(".active") == undefined) {
     const div = document.createElement("div");
-    if (target.toLowerCase() == "circle") {
+    if (target == "circle") {
       div.innerHTML = `<svg> <circle cx="62" cy="50" r="45"/> </svg>`;
-    } else if (target.toLowerCase() == "rectangle") {
+    } else if (target == "rectangle") {
       div.innerHTML = `<svg>
         <rect x="25" y="10" width="80" height="80" />
       </svg>`;
@@ -40,10 +40,10 @@ function addElement(target) {
     return object.appendChild(div);
   } else {
     const div = document.querySelector(".active"),
-      colorAttr = div.firstElementChild.firstElementChild.getAttribute("fill");
-    if (target.toLowerCase() == "circle") {
+      colorValue = div.firstElementChild.firstElementChild.getAttribute("fill");
+    if (target == "circle") {
       div.innerHTML = `<svg> <circle cx="62" cy="50" r="45"/> </svg>`;
-    } else if (target.toLowerCase() == "rectangle") {
+    } else if (target == "rectangle") {
       div.innerHTML = `<svg>
         <rect x="25" y="10" width="80" height="80" />
       </svg>`;
@@ -54,7 +54,7 @@ function addElement(target) {
     }
     div.firstElementChild.firstElementChild.setAttribute(
       "fill",
-      `${colorAttr}`
+      `${colorValue}`
     );
   }
 }

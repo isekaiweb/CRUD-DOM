@@ -1,0 +1,133 @@
+body {
+  user-select: none;
+}
+
+h1 {
+  margin: 50px auto;
+  display: block;
+  text-align: center;
+  width: fit-content;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  position: fixed;
+  cursor: pointer;
+  bottom: 50px;
+  display: block;
+
+  z-index: 1;
+}
+
+#add {
+  background: no-repeat url(./plus.png);
+  background-size: contain;
+  background-position: center;
+
+  left: 50px;
+}
+
+#remove {
+  background: no-repeat url(./basket.png);
+  background-position: center;
+  background-size: contain;
+
+  right: 50px;
+}
+
+#color {
+  background: no-repeat url(./colorplate.png);
+  background-position: center;
+  background-size: contain;
+
+  left: 150px;
+}
+
+#object {
+  display: flex;
+
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.active {
+  border-color: blue !important;
+}
+
+#object > div {
+  width: 250px;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+
+  margin: 20px;
+  border: 5px solid black;
+}
+
+#object > div > svg {
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin: 20% auto;
+}
+
+
+
+#addOption,
+#colorOption {
+  background-color: black;
+  color: #fff;
+  display: block;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 20px;
+  display: none;
+  position: fixed;
+  bottom: 120px;
+}
+
+#addOption p,
+#colorOption p {
+  cursor: pointer;
+}
+
+#addOption p:hover,
+#colorOption p:hover {
+  background-color: white;
+  color: black;
+}
+
+#addOption::after,
+#colorOption::after {
+  content: "";
+  display: block;
+  position: fixed;
+
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+
+  bottom: 120px;
+  left: 60px;
+  transform: rotate(40deg);
+}
+
+#colorOption {
+  left: 130px;
+}
+
+#colorOption::after {
+  left: 155px;
+}
+
+.classHide {
+  display: block !important;
+}

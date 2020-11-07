@@ -1,7 +1,5 @@
-# CRUD-DOM
-CRUD OBJECT USING DOM
+# CRUD sederhana dengan DOM
 
-CRUD sederhana dengan DOM
 Saat objek dipilih maka border akan berwarna biru
 
 terdapat 3 objek :

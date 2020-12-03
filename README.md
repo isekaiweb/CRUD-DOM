@@ -13,6 +13,6 @@ terdapat 4 warna :
 - red
 - green
 
-Pada tombol + diguanakn untuk menambahkan objek baru atau pun menganti jenis objek yang lama jika objek dipilih
+Pada tombol + digunakan untuk menambahkan objek baru atau pun mengganti jenis objek yang lama jika objek dipilih
 pada tombol plate color digunakan untuk menambahkan color pada objek yang dipilih
 pada tombol hapus akan menghapus objek yang dipilih
